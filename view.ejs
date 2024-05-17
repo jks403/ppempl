@@ -1,0 +1,94 @@
+<DOCTYPE html>
+
+<html lang= "en">
+        <head>
+                <meta charset = "UTF-8">
+                <link rel = "stylesheet" href="./public/styles/layout.css">
+                <link rel = "stylesheet" href="./public/styles/content.css">
+                <title> My PPempl Form </title>
+        </head>
+        <body>
+                <header>
+                        <h1> Employee PPNorCal Database </h1>
+                </header>
+                <form action= "/add" method="POST">
+                        <fieldset>
+                            <h3>Add new employee</h3>
+                            <label>Employee ID</label>
+                            <input type ="text" id = 'empID' name="id" required>
+                            <br><br>
+                            <label>Name</label>
+                             <input type="text" id = "name" name="name" required>
+                            <br><br>
+                            <button type ="reset">Reset</button>
+
+                   </fieldset>
+        </form>
+
+
+                        <% if (locals.empls)  { %>
+
+                        <ul>
+                                        <%empls.forEach((empl)   =>   {  %>
+                                <li>
+                                        <%=empl.id %>
+                                        <%=empl.name %>
+                                        <%=empl.depnum %>
+                                        <%=empl.contact %>
+
+
+
+
+
+                                <% }) %>
+                        </ul>
+
+                        <% }  %>
+
+
+        <img src="./public/images/kenderry.PNG">
+        <img src="./public/images/markzotman.png">
+               <form action="/view" method="POST">
+                   <fieldset>
+                   <h3>View an employee</h3>
+                   <label>Employee ID</label>
+                   <input type="text" id="empID" name="id" required>
+                   <br><br>
+                   <button type ="reset">Reset</button>
+                   <button type ="submit">Submit</button>
+                    <br><br><br>
+                  </fieldset>
+                </form>
+                <img src="./public/images/steve_rosh.jpg">
+                <img src="./public/images/joshua_rosh.PNG">
+                <img src="./public/images/Aaron.PNG">
+
+                   <form action="/update" method="POST">
+
+                          <fieldset>
+                              <h3>Update an employee</h3>
+                                <label>Employee ID</label>
+                                <input type ="text" id = 'empID' name="id" required>
+                                <br><br>
+                                 <label>New Name</label>
+                                 <input type="text" id = "name" name="name" required>
+                                  <br><br>
+                                <button type ="reset">Reset</button>
+                                <button type ="submit">Submit</button>
+                          </fieldset>
+                  </form>
+                 <form action="/delete" method="POST">
+                        <img src="./public/images/Dodge.jpg">
+                      <img src="./public/images/rednurse.jpg">
+                          <fieldset>
+                            <h3>Delete an employee</h3>
+                                 <label>Employee ID</label>
+                                <input type ="text" id = 'empID' name="id" required>
+                                <br><br>
+                                <button type ="reset">Reset</button>
+                                <button type ="submit">Submit</button>
+                               <br><br><br>
+                            </fieldset>
+                   </form>
+                        <img src="./public/images/river.png">
+                        <img src="./public/images/49ers.jpg">
